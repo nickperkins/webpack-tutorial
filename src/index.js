@@ -1,5 +1,10 @@
 import React, { useState } from "react";
 import { render } from "react-dom";
+import { getUsers } from "./common/usersAPI";
+
+import "./style.scss";
+
+getUsers().then(json => console.log(json));
 
 function App() {
   const [state, setState] = useState("CLICK ME");
