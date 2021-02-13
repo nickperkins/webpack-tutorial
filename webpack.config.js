@@ -15,8 +15,11 @@ module.exports = {
                 exclude: /node_modules/,
                 use: ['babel-loader']
             }
-          
+
         ]
+    },
+    optimization: {
+      splitChunks: { chunks: 'all'}
     },
     plugins: [
         new MiniCssExtractPlugin(),
